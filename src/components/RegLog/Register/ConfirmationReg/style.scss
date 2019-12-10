@@ -1,0 +1,61 @@
+.ConfirmationReg {
+  &__form {
+    margin-top: 5.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__input {
+    border: 0;
+    border-bottom: 2px solid var(--color-grey-6);
+    height: 4rem;
+    width: 3rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+
+    &:not(:last-child) {
+      margin: 0 2rem 0 0;
+
+    }
+
+    &::placeholder {
+      // font-size: 3rem;
+      // line-height: 3.5rem;
+      color: var(--color-placeholder);
+    //   letter-spacing: 3px;
+    }
+  }
+
+  &__description {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--color-grey-8);
+  }
+
+  &__btn-box {
+    font-size: 1.4rem;
+    padding: 1rem 0 2.6rem 0;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__resend-btn {
+    display: inline-block;
+    margin-bottom: 2.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  &__login-btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+}

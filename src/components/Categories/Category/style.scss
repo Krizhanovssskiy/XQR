@@ -1,0 +1,52 @@
+@import '../../../scss/mixins';
+
+.Category {
+  height: 14.7rem;
+  min-width: 11.1rem;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid var(--color-grey-9-1);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-06);
+  background-size: cover;
+  cursor: pointer;
+  @include centering-children;
+
+  &__image-box {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  &__image-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(#000000, 1),
+      rgba(#000000, 0),
+      rgba(#000000, 0)
+    );
+  }
+
+  &__title-box {
+    width: 100%;
+    line-height: 1;
+    padding: var(--spacing-06);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-06);
+  }
+}

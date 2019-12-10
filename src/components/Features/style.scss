@@ -1,0 +1,34 @@
+.Features {
+  height: 100%;
+  overflow: hidden;
+
+  &__scroll__photo-box {
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 8px;
+      background-image: linear-gradient(
+                      to bottom,
+                      rgba(#000000, 1),
+                      rgba(#000000, 0),
+                      rgba(#000000, 0)
+      );
+    }
+  }
+
+  &__scroll__top-text {
+    top: 8px;
+  }
+
+  &__scroll__bottom-text {
+    bottom: 10%;
+    padding: 6px 8px;
+    background: var(--color-black);
+    opacity: 0.7;
+    border-radius: 8px;
+  }
+}

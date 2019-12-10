@@ -1,0 +1,101 @@
+@import '../../../scss/mixins';
+
+.PopupCategories {
+  &__preview {
+    font-family: var(--font-primary);
+    height: 14.7rem;
+    width: 11.1rem;
+    border: 2px dashed var(--color-grey-dark-0);
+    border-radius: 8px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      @include centering-children;
+      background: linear-gradient(
+        to top,
+        rgba(#000000, 1),
+        rgba(#000000, 0),
+        rgba(#000000, 0)
+      );
+    }
+  }
+
+  &__text-box {
+    width: 100%;
+    line-height: 1;
+    padding: var(--spacing-06);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-06);
+  }
+
+  &__icon-box {
+    height: 4.6rem;
+    width: 4.6rem;
+    border-radius: 50%;
+    background-color: var(--color-popup-box);
+    cursor: pointer;
+    @include centering-children;
+    @include centering-abs;
+  }
+
+  &__icon-photo-camera {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  &__file-input {
+    display: none;
+  }
+
+  &__inputs-container {
+    width: 100%;
+    padding: var(--spacing-24);
+    margin-bottom: 5rem;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-grey-dark-1);
+    margin: var(--spacing-12) 0;
+    &::placeholder {
+      color: var(--color-popup-text);
+    }
+  }
+
+  &__input-price {
+    width: unset;
+    margin: 0;
+
+    border: none;
+  }
+
+  &__input-prefix {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-grey-dark-1);
+    padding-right: var(--spacing-06);
+  }
+}

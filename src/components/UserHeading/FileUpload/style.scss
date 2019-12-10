@@ -1,0 +1,90 @@
+@import '../../../scss/mixins';
+
+.FileUpload {
+  @include centering-abs;
+  left: calc(var(--avatar-diameter-mobile) / 2);
+  width: var(--avatar-diameter-mobile);
+  height: 100%;
+  @include centering-children;
+
+  @include respond(phone) {
+    left: 50%;
+  }
+
+  &:hover > * {
+    opacity: 1;
+
+    @include respond(phone) {
+      visibility: visible;
+    }
+  }
+
+  &__popup-box-video {
+    width: 9.2rem;
+    height: 6.5rem;
+    background-color: var(--color-popup);
+    box-shadow: var(--shadow-popup);
+    border-radius: 6px;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    @include respond(phone) {
+      @include centering-abs;
+      transform: translate(
+        calc(-50% - var(--avatar-diameter-mobile) / 2),
+        -50%
+      );
+
+      visibility: hidden;
+    }
+  }
+
+  &__popup-video-text {
+    color: var(--color-grey-8);
+    padding: 2px 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  &__popup-video-text:hover {
+    color: var(--color-white);
+  }
+
+  &__btn {
+    position: absolute;
+    left: 50%;
+    bottom: 2.7rem;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 13rem;
+    padding: 3px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    @include respond(phone) {
+      visibility: hidden;
+    }
+  }
+
+  &__popup-image-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    fill: var(--color-black);
+  }
+
+  &__popup-image-text {
+    color: var(--color-black);
+    font-size: 1.2rem;
+  }
+
+  &__input {
+    display: none;
+  }
+}

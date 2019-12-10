@@ -1,0 +1,28 @@
+.CvPopupStars {
+  margin: var(--spacing-06) 0;
+  display: flex;
+  justify-content: space-between;
+
+  &__input {
+    display: none;
+  }
+}
+
+.Star {
+  &__box {
+    padding: 3px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-popup);
+  }
+
+  &__icon--filled {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-white);
+  }
+}

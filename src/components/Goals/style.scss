@@ -1,0 +1,62 @@
+@import '../../scss/mixins';
+
+.Goals {
+  position: relative;
+  height: 74%;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--color-black);
+
+  overflow-y: scroll;
+  @include vertical-scrollbar;
+
+  //
+  //@include respond(phone) {
+  //  overflow-y: unset;
+  //  overflow-x: scroll;
+  //  height: auto;
+  //  padding-bottom: calc(0.25 * var(--gutter));
+  //  @include horizont-scrollbar;
+  //}
+
+  &__container {
+
+  }
+  &__list-tasks {
+    margin-bottom: var(--spacing-12);
+
+    //@include respond(phone) {
+    //  display: flex;
+    //}
+  }
+
+  &__task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-06);
+    @include respond(phone) {
+      min-width: 150px;
+    }
+  }
+
+  &__count-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 21px;
+    min-height: 21px;
+    margin-right: var(--spacing-06);
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+
+    color: var(--color-primary);
+  }
+
+  &__btn-add-task {
+    color: var(--color-primary);
+  }
+}

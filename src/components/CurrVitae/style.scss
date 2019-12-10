@@ -1,0 +1,36 @@
+@import '../../scss/mixins';
+
+.CurrVitae {
+  cursor: pointer;
+  width: 100%;
+  height: 20.2rem;
+  overflow-y: auto;
+  padding-left: var(--spacing-06);
+  padding-right: calc(0.25 * var(--gutter));
+
+  @include vertical-scrollbar;
+
+  @include respond(phone) {
+    height: 17.6rem;
+    padding: 0;
+  }
+}
+
+.CurrVitaeViewFull {
+  cursor: pointer;
+  width: 100%;
+  height: calc(
+    26.5rem - var(--header-height) - var(--mobile-footer-height) / 2
+  );
+  overflow-y: auto;
+  padding-left: var(--spacing-06);
+  padding-right: calc(0.25 * var(--gutter));
+  display: grid;
+
+  @include vertical-scrollbar;
+
+  @include respond(phone) {
+    height: 17.6rem;
+    padding: 0;
+  }
+}

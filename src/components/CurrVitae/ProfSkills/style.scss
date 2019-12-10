@@ -1,0 +1,42 @@
+@import '../../../scss/mixins';
+
+.ProfSkills {
+  margin-bottom: var(--spacing-18);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 var(--spacing-12);
+
+    @include respond(mobile-m) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    font-family: var(--font-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-12);
+    padding: 0 var(--spacing-06) 0 0;
+  }
+
+  &__text-box {
+    width: 56%;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-left: 2px solid var(--color-grey-3);
+    padding: var(--spacing-06);
+    padding-right: 0;
+  }
+
+  &__icon {
+    height: 5.3rem;
+    width: 5.3rem;
+    fill: var(--color-primary);
+  }
+}

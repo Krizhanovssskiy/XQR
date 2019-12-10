@@ -1,0 +1,54 @@
+@import '../../../scss/mixins';
+
+.PopupAddFriend {
+  &__message-box {
+    width: 100%;
+    padding: var(--spacing-24);
+    margin-bottom: 7.3rem;
+  }
+
+  &__message {
+    font-family: var(--font-secondary);
+    font-size: 1.6rem;
+  }
+
+  &__message-username {
+    font-weight: bold;
+  }
+
+  &__btn-container {
+    position: absolute;
+    height: 7.3rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-grey-0);
+    color: var(--color-white);
+    fill: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &__btn {
+    padding: var(--spacing-12);
+    @include centering-children;
+  }
+
+  &__icon-text {
+    margin-right: var(--spacing-12);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  &__icon-cancel {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  &__icon-confirm {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+}

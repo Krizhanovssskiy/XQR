@@ -1,0 +1,89 @@
+@import '../../../scss/mixins';
+
+.WorkPopupView {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include centering-children;
+  background-color: var(--color-grey-1);
+
+  &__cancel-box {
+    height: 6.6rem;
+    width: 6.6rem;
+    background-color: rgba(#000000, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    cursor: pointer;
+    @include centering-children;
+  }
+
+  &__icon-cancel {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: var(--color-white);
+  }
+
+  &__image-box {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__footer {
+    height: 13rem;
+    background-color: rgba(#000000, 0.7);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &__footer-container {
+    height: 100%;
+    width: 80%;
+    padding: var(--spacing-12) 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__footer-title {
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: var(--color-white);
+  }
+
+  &__footer-link-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-chain {
+    height: 1.4rem;
+    width: 1.4rem;
+    fill: var(--color-primary);
+    cursor: pointer;
+  }
+
+  &__footer-link {
+    font-family: inherit;
+    background-color: inherit;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    margin-right: var(--spacing-06);
+  }
+
+  &__footer-description {
+    font-size: 1.3rem;
+    color: var(--color-white);
+  }
+}

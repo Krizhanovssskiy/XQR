@@ -1,0 +1,60 @@
+.PopUpAddedTask {
+  &__popup-box {
+    position: relative;
+    max-width: 346px;
+    width: 100vw;
+    height: 130px;
+    padding: var(--spacing-24) var(--spacing-12);
+
+    background: var(--color-grey-dark-2);
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.370216);
+    border-radius: 4px;
+  }
+
+  &__popup-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__popup-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-grey-dark-1);
+    outline: 0;
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-white);
+  }
+
+  &__btns-block {
+    max-width: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__popup-btn {
+    fill: var(--color-white);
+  }
+
+  &__delete-btn {
+    color: var(--color-white);
+    position: absolute;
+    right: 12px;
+    top: 6px;
+    cursor: pointer;
+
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+  }
+}

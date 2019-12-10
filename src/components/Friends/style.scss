@@ -1,0 +1,35 @@
+@import '../../scss/mixins';
+
+.Friends {
+  // height: 46.7rem;
+  height: 100%;
+  overflow: hidden;
+  // border-radius: 0 0 8px 8px;
+  border-radius: 8px;
+  padding-right: calc(0.1 * var(--gutter));
+
+  @include respond(phone) {
+    height: auto;
+    margin-top: 0;
+  }
+
+  &__list {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+    padding-right: calc(0.25 * var(--gutter));
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: var(--color-grey-7);
+      border-radius: 2.5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      margin-right: 5px;
+      border-radius: 2.5px;
+      background-color: var(--color-grey-4);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+  }
+}

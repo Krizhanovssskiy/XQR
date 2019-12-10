@@ -1,0 +1,138 @@
+@import '../../../scss/mixins';
+
+.ServicesPopupView {
+  width: 56.4rem;
+  height: 37.8rem;
+  padding: var(--spacing-18);
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.370216);
+  position: relative;
+  display: flex;
+
+  @include respond(phone) {
+    width: calc(100vw - 2rem);
+    height: calc(100vh - var(--header-height) - var(--mobile-footer-height) - 2rem);
+    display: block;
+  }
+
+  &__icons-box {
+    position: absolute;
+    top: var(--spacing-18);
+    right: var(--spacing-18);
+    cursor: pointer;
+    @include centering-children;
+  }
+
+  &__icon-cancel {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: #373737;
+  }
+
+  &__edit-box {
+    margin-right: var(--spacing-06);
+    @include centering-children;
+  }
+
+  &__icon-edit {
+    height: 1rem;
+    width: 1rem;
+    fill: #878787;
+    margin-right: 1px;
+  }
+
+  &__text-edit {
+    font-family: var(--font-primary-semibold);
+    font-size: 1.2rem;
+    color: #787878;
+  }
+
+  &__image-box {
+    height: 100%;
+    margin-right: var(--spacing-18);
+    border: 1px solid var(--color-grey-9-1);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1;
+
+    @include respond(phone) {
+      margin-right: 0;
+      margin-top: var(--spacing-36);
+      height: 36%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text-container {
+    padding-top: var(--spacing-18);
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+
+    @include respond(phone) {
+      height: calc(64% - var(--spacing-36));
+    }
+
+  }
+
+  &__title {
+    font-family: var(--font-secondary);
+    font-weight: normal;
+    color: var(--color-grey-5);
+    font-size: 1.6rem;
+    line-height: 1.9;
+
+    @include respond(phone) {
+      text-align: center;
+    }
+
+  }
+
+  &__buy-box {
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+  }
+
+  &__price {
+    font-family: var(--font-secondary);
+    color: var(--color-grey-5);
+    font-size: 2rem;
+  }
+
+  &__btn {
+    width: 9.5rem;
+    min-height: 2.9rem;
+    background-color: var(--color-primary);
+    @include centering-children;
+    border-radius: 8px;
+    color: var(--color-white);
+    margin: var(--spacing-06) 0 var(--spacing-18);
+
+    @include respond(phone) {
+      margin: var(--spacing-06) 0 var(--spacing-12);
+    }
+
+  }
+
+  &__description-box {
+    padding-top: var(--spacing-06);
+    padding-right: var(--spacing-06);
+    overflow-y: auto;
+    @include vertical-scrollbar;
+  }
+
+  &__description {
+    font-size: 1.3rem;
+    text-align: justify;
+  }
+}

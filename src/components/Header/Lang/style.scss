@@ -1,0 +1,33 @@
+@import '../../../scss/mixins';
+
+.Lang {
+  height: 100%;
+  margin-left: 1rem;
+  cursor: pointer;
+
+  @include centering-children;
+
+  @include respond(phone) {
+    margin-right: 1rem;
+  }
+
+
+  &__label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.6rem;
+    transition: all 0.2s;
+    color: var(--color-primary-dark);
+    @include respond(phone) {
+      color: var(--color-white);
+    }
+  }
+
+  &__label:hover {
+    color: var(--color-white);
+
+    @include respond(phone) {
+      color: var(--color-primary-dark);
+    }
+  }
+}

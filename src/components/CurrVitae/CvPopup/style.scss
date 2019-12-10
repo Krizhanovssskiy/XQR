@@ -1,0 +1,222 @@
+@import '../../../scss/mixins';
+
+.CvPopup {
+  height: 48rem;
+  width: 34.6rem;
+  background-color: var(--color-popup);
+  border-radius: 8px;
+  box-shadow: var(--shadow-popup);
+  padding: var(--spacing-12) var(--spacing-12) 0
+    var(--spacing-24);
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  @include respond(mobile-m) {
+    width: calc(100vw - 2rem);
+    height: calc(100vh - var(--header-height) - var(--mobile-footer-height) - 2rem);
+
+    margin: 1rem;
+  }
+
+  &__form {
+    font-family: var(--font-secondary);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-grey-dark-4);
+    margin-bottom: var(--spacing-24);
+    margin-right: var(--spacing-18);
+    padding: 0 var(--spacing-24);
+  }
+
+  &__inputs-box {
+    // width: 24.5rem;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-grey-dark-1);
+    margin: var(--spacing-12) 0;
+    &::placeholder {
+      color: var(--color-popup-text);
+    }
+  }
+
+  &__nav-container {
+    @include centering-children;
+  }
+
+  &__btn-container-add {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-06);
+    cursor: pointer;
+    align-self: center;
+  }
+
+  &__btn-container {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-06);
+    cursor: pointer;
+    align-self: center;
+  }
+
+  &__btn-container:hover &__icon-plus {
+    fill: var(--color-white);
+  }
+
+  &__btn-container:hover &__btn-description,
+  &__btn-container-add:hover &__btn-description {
+    color: var(--color-white);
+  }
+
+  &__btn-container-add:hover > &__btn-plus {
+    border-color: var(--color-white);
+  }
+
+  &__btn-container-add:hover &__icon-plus {
+    fill: var(--color-white);
+  }
+
+  &__btn {
+    @include centering-children;
+    cursor: pointer;
+  }
+
+  &__btn-description {
+    font-size: 1.4rem;
+    color: var(--color-popup-text);
+    padding: var(--spacing-06);
+    transition: all 0.2s;
+  }
+
+  &__btn-plus {
+    height: var(--spacing-36);
+    width: var(--spacing-36);
+    border-radius: 50%;
+    border: 1px dashed var(--color-grey-9-1);
+    transition: all 0.2s;
+  }
+
+  &__btn-confirm-reset {
+  }
+
+  &__stars-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-12) 0;
+  }
+
+  &__star-box {
+    cursor: pointer;
+    padding: 2px;
+    @include centering-children;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__star-box:hover > &__icon-star {
+    fill: var(--color-white);
+  }
+
+  &__icon-star {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-popup);
+    transition: all 0.2s;
+  }
+
+  &__icon-star--active {
+    fill: var(--color-white);
+  }
+
+  &__icon-chevron {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  &__icon-plus {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-popup-text);
+    transition: all 0.2s;
+  }
+
+  &__icon-cancel {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: var(--color-white);
+  }
+
+  &__icon-delete {
+    height: 1rem;
+    width: 1rem;
+    fill: var(--color-white);
+  }
+
+  &__btn-delete {
+    padding: 1rem;
+    padding-bottom: 2rem;
+    text-align: right;
+    width: fit-content;
+    cursor: pointer;
+    align-self: flex-end;
+    @include centering-children;
+  }
+
+  &__text-delete {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    margin-left: var(--spacing-06);
+  }
+
+  &__btn-chevron {
+    height: 2.9rem;
+    width: 2.9rem;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    margin: 0 var(--spacing-06);
+  }
+
+  &__icon-confirm {
+    height: 2.3rem;
+    width: 2.3rem;
+    fill: var(--color-white);
+  }
+
+  &__footer {
+    position: absolute;
+    height: 7.3rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-grey-0);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &__forms-container {
+    margin-top: var(--spacing-12);
+    margin-bottom: 7.3rem;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    overflow-y: auto;
+    @include vertical-scrollbar;
+  }
+}

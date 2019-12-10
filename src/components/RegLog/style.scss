@@ -1,0 +1,30 @@
+@import '../../scss/mixins';
+
+.RegLog {
+  font-family: var(--font-secondary);
+  position: relative;
+  width: 56rem;
+  margin: auto;
+  margin-top: 6.3rem;
+  padding: 4.2rem 9.7rem 0 9.7rem;
+  background-color: var(--color-white);
+  color: var(--color-grey-5);
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 8px;
+  overflow: auto;
+
+  @include respond(mobile-l) {
+    width: 100vw;
+    // height: calc(100vh - 10rem);
+    margin: 0;
+    padding: 9.1rem var(--spacing-12) 1rem;
+    margin-bottom: 4.8rem;
+  }
+
+  &__header {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+}

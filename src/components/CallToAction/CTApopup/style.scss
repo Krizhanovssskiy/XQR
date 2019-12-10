@@ -1,0 +1,245 @@
+@import '../../../scss/mixins';
+
+.CTApopup {
+  width: 36.7rem;
+  padding: var(--spacing-30);
+  background-color: var(--color-white);
+  font-family: var(--font-secondary);
+  border-radius: 8px;
+  position: relative;
+
+  @include respond(mobile-l) {
+    width: calc(100vw - 2rem);
+    margin: 1rem;
+  }
+
+  @include respond(mobile-m) {
+    padding: var(--spacing-18);
+  }
+
+
+  &__icon-close-box {
+    position: absolute;
+    top: var(--spacing-06);
+    right: var(--spacing-06);
+    padding: var(--spacing-06);
+    cursor: pointer;
+  }
+
+  &__icon-close {
+    height: 1.6rem;
+    width: 1.6rem;
+    fill: #c4c4c4;
+  }
+
+  &__text-box {
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.3;
+    color: var(--color-grey-5);
+
+    @include respond(mobile-m) {
+      font-size: 1.4rem;
+    }
+  
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #5a6d78;
+    @include respond(mobile-m) {
+      font-size: 1.2rem;
+    }
+
+  }
+
+  &__list {
+    margin-top: var(--spacing-24);
+    @include respond(mobile-m) {
+      margin-top: var(--spacing-18);
+    }
+
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-12);
+
+    @include respond(mobile-m) {
+      margin-bottom: var(--spacing-06);
+    }
+
+  }
+
+  &__list-item-icon-box {
+    margin-right: var(--spacing-12);
+
+    @include respond(mobile-m) {
+      margin-right: var(--spacing-06);
+    }
+
+  }
+
+  &__list-item-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-success-1);
+    @include respond(mobile-m) {
+      width: 1.6rem;
+      height: 1.6rem;
+      }
+    
+  }
+
+  &__list-item-text {
+    font-size: 1.5rem;
+    text-align: start;
+
+    @include respond(mobile-m) {
+      font-size: 1.3rem;
+    }
+
+  }
+
+  &__form {
+    margin-top: var(--spacing-24);
+    @include respond(mobile-m) {
+      margin-top: var(--spacing-12);
+    }
+    
+  }
+
+  &__form-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form-group {
+    width: 47%;
+    position: relative;
+  }
+
+  &__form-group-text {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.9;
+    color: #9a9a9a;
+
+    @include respond(mobile-m) {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      }
+
+  }
+
+  &__form-radio-input {
+    display: none;
+  }
+
+  &__form-radio-input:checked ~ &__form-radio-label > &__form-radio-btn::after {
+    opacity: 1;
+  }
+
+  &__form-radio-label {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  &__form-radio-input:checked + &__form-radio-label {
+    border-color: var(--color-primary);
+  }
+
+  &__form-radio-label-50 {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    background-color: #eb4458;
+    padding: 0 5px 0 9px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    @include respond(mobile-m) {
+      font-size: 1.2rem;
+    }
+
+  }
+
+  &__form-radio-label-domen {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #eb4458;
+
+    @include respond(mobile-m) {
+      font-size: 1rem;
+    }
+
+  }
+
+  &__form-radio-btn {
+    height: 2.2rem;
+    width: 2.2rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    display: inline-block;
+    @include centering-children;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1.4rem;
+      width: 1.4rem;
+      border-radius: 50%;
+      background-color: var(--color-primary);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  &__form-group-price {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: -6px 0;
+    @include respond(mobile-m) {
+      font-size: 1.6rem;
+      margin: -3px 0;
+    }
+  
+  }
+
+  &__form-group-price-number {
+    font-size: 3rem;
+
+    @include respond(mobile-m) {
+      font-size: 2.2rem;
+    }
+
+  }
+
+  &__form-submit-btn {
+    height: 3.9rem;
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    border-radius: 8px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    @include centering-children;
+    margin-top: var(--spacing-24);
+  }
+}

@@ -1,0 +1,84 @@
+@import '../../../scss/mixins';
+
+.Quiz {
+  border-bottom: 1px solid var(--color-grey-6);
+  padding:  var(--spacing-12) var(--spacing-24);
+
+  &:first-child {
+    border-top: 1px solid var(--color-grey-6);
+  }
+
+  &__title-box {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__radio-container-yes-no {
+  }
+
+  &__radio-container-stars {
+    display: flex;
+    margin-top: var(--spacing-12);
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: var(--spacing-12);
+  }
+
+  &__radio-group-star {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &:not(:first-child) {
+      margin-left: var(--spacing-24);
+    }
+  }
+
+  &__icon-star {
+    height: 3rem;
+    width: 3rem;
+    fill: var(--color-logo);
+  }
+
+  &__radio-label {
+    @include centering-children;
+  }
+
+  &__radio-btn {
+    height: 2.2rem;
+    width: 2.2rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    display: inline-block;
+    @include centering-children;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1.4rem;
+      width: 1.4rem;
+      border-radius: 50%;
+      background-color: var(--color-primary);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  &__radio-input:checked + &__radio-label > &__radio-btn::after {
+    opacity: 1;
+  }
+
+  &__radio-group-text {
+    margin-left: var(--spacing-12);
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../scss/mixins';
+
+.ScrollingList {
+  overflow-x: auto;
+  display: flex;
+  @include horizont-scrollbar;
+
+  & > *:not(:last-child) {
+    margin-right: var(--spacing-06);
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../../scss/mixins';
+
+.QrCode {
+  position: absolute;
+  right: 3rem;
+  width: 17.2rem;
+  padding-top: 17.2rem; /* 1:1 Aspect Ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  z-index: 2;
+  cursor: pointer;
+
+  @include respond(phone) {
+    width: var(--qr-diameter-mobile);
+    padding-top: var(--qr-diameter-mobile); /* 1:1 Aspect Ratio */
+    background-color: #f1f1f1;
+    @include centering-abs;
+    transform: translate(calc(-50% + var(--avatar-diameter-mobile) / 2), -50%);
+    border-radius: 1.3rem;
+  }
+
+  &__box {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    bottom: 3px;
+    right: 3px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    @include respond(phone) {
+      border-radius: 1.3rem;
+    }
+  }
+
+  &__code {
+    width: 64%;
+
+    @include respond(phone) {
+      width: 78%;
+    }
+  }
+}

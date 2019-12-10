@@ -1,0 +1,95 @@
+@import '../../scss/mixins';
+.Reviews {
+  &__list {
+    height: 82%;
+    overflow-y: auto;
+    font-family: var(--font-secondary);
+    border-top: 1px solid var(--color-grey-2-3);
+    background-color: var(--color-reviews);
+    padding: var(--spacing-18) var(--spacing-18) var(--spacing-18) 0;
+    @include vertical-scrollbar;
+  }
+}
+
+
+.Review {
+  font-family: var(--font-secondary);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--spacing-06);
+
+  &> *:not(:last-child) {
+    margin-right: var(--spacing-12);
+  }
+
+  &__image-box {
+    height: 5.5rem;
+    width: 5.5rem;
+    border-radius: 50%;
+    background-size: cover;
+  }
+
+  &__text-container {
+    width: 50%;
+    line-height: 1.2;
+    flex: 1;
+  }
+
+  &__username {
+    color: var(--color-grey-5);
+    font-size: 1.2rem;
+  }
+
+  &__star-box {
+    display: flex;
+    padding: var(--spacing-06) 0;
+  }
+
+  &__icon {
+    height: 1rem;
+    width: 1rem;
+    fill: var(--color-primary);
+  }
+
+  &__text-box {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-primary-dark-2);
+  }
+
+  &__date-box {
+    color: var(--color-primary-dark-2);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: auto;
+  }
+
+  &__btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing-06);
+  }
+
+  &__btn {
+    width: 85px;
+    height: 23px;
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    line-height: 2rem;
+    border-radius: 8px;
+    @include centering-children;
+    cursor: pointer;
+    border: 1.5px solid var(--color-primary)
+  }
+
+  &__btn-primary-semibold {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  &__btn-white {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    margin-left: 20px;
+  }
+}

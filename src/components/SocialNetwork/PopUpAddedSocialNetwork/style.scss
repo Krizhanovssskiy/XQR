@@ -1,0 +1,13 @@
+.PopUpSocNetwork {
+  &__block-list {
+    margin-bottom: var(--spacing-18);
+  }
+  &__active {
+    background: var(--color-grey-2-4) !important;
+  }
+
+  &__white-btn {
+    fill: var(--color-black-1);
+    background: var(--color-white);
+  }
+}

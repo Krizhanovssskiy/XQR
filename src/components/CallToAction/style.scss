@@ -1,0 +1,39 @@
+.CallToAction {
+  width: 100%;
+  display: flex;
+
+  & > *:not(:last-child) {
+    margin-right: var(--spacing-06);
+  }
+  &__btn {
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    line-height: 14px;
+    height: 40px;
+    flex: 1 1;
+    text-align: center;
+    border: none;
+    outline: transparent;
+    border-radius: 21px;
+    padding: 0 1rem;
+  }
+
+  &__btn-create {
+    font-family: var(--font-primary-semibold);
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--color-white);
+    background: var(--color-primary);
+  }
+
+  &__btn-primary {
+    color: var(--color-white);
+    background: var(--color-primary);
+  }
+
+  &__btn-secondary {
+    color: var(--color-primary);
+    background: var(--color-white);
+    border: 2px solid var(--color-primary);
+  }
+}

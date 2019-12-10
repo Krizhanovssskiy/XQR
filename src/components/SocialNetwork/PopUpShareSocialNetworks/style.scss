@@ -1,0 +1,30 @@
+.ShareSocialNetworks {
+  &__container {
+    max-width: 500px;
+    width: 100%;
+    padding: var(--spacing-12);
+    height: 187px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--color-black-1);
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.370216);
+    border-radius: 4px;
+  }
+
+  &__text {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: var(--color-white);
+  }
+
+  &__icon {
+    fill: var(--color-black-1);
+    background: var(--color-white);
+  }
+}

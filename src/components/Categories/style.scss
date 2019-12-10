@@ -1,0 +1,50 @@
+@import '../../scss/mixins.scss';
+
+.Categories {
+  height: 21.6rem;
+  border-radius: 8px 8px 0 0;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-12);
+    align-items: center;
+  }
+
+  &__title-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 1rem;
+    @include sectionTitile;
+    text-transform: capitalize;
+  }
+
+  &__quantity {
+    @include sectionTitile;
+  }
+
+  &__icons-box {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-grey-dark);
+  }
+
+  &__icon--active {
+    fill: var(--color-primary);
+  }
+
+  &__icon--users {
+    width: 2.7rem;
+    height: 2.7rem;
+    fill: var(--color-black);
+  }
+}

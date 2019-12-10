@@ -1,0 +1,185 @@
+@import '../../scss/mixins';
+
+.Quizzes {
+  @include dropdown;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-12) 0 var(--spacing-24);
+
+  @include respond(phone) {
+    width: calc(100vw - var(--spacing-24));
+    margin: 0 auto;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: var(--spacing-12);
+  }
+
+  &__view {
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 var(--spacing-24);
+  }
+
+  &__view-label {
+    @include centering-children;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #979797;
+  }
+
+  &__input-box {
+    height: 3rem;
+    padding: 0 var(--spacing-24);
+  }
+
+  &__icon-visible {
+    height: 2.2rem;
+    width: 2.2rem;
+    fill: var(--color-grey-dark-1);
+    margin-left: var(--spacing-12);
+  }
+
+  &__icon-pencil {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: var(--color-grey-dark-1);
+    margin-left: var(--spacing-12);
+  }
+
+  &__input {
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 3px var(--spacing-06);
+    font-weight: 500;
+    background-color: #efefef;
+    color: #000000;
+    &::placeholder {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    padding: 3px var(--spacing-06);
+    font-weight: 500;
+    color: #000000;
+  }
+
+  &__questions-container {
+  }
+
+  &__add-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--spacing-24);
+  }
+
+  &__add-box {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__icon-sign {
+    height: 2rem;
+    width: 2rem;
+    fill: #7f7f7f;
+  }
+
+  &__add-label {
+    margin-left: var(--spacing-12);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  &__text-aria-box {
+    padding: 0 var(--spacing-24);
+  }
+
+  &__text-aria-label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  &__text-aria {
+    margin-top: var(--spacing-06);
+    resize: none;
+    width: 100%;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+  }
+
+  &__buttons-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--spacing-24);
+  }
+
+  &__button {
+    height: 4rem;
+    width: 14.2rem;
+    font-family: var(--font-primary-semibold);
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    @include centering-children;
+
+    &--inverse {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    &--secondary {
+      display: flex;
+      border: none;
+      background-color: #e2e2e2;
+    }
+  }
+
+  &__share-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--spacing-24);
+  }
+
+  &__qr-container {
+    height: 4rem;
+    width: 14.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon-download-box {
+    height: 4rem;
+    width: 4rem;
+    background-size: cover;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    @include centering-children;
+  }
+
+  &__icon-download {
+    height: 1.6rem;
+    width: 1.6rem;
+    fill: #000000;
+  }
+
+  &__share-label {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &__icon-link {
+    height: 2.4rem;
+    width: 2.4rem;
+    fill: #000000;
+    margin-left: var(--spacing-12);
+  }
+}

@@ -1,0 +1,79 @@
+@import '../../../scss/mixins';
+
+.UserMenu {
+  @include dropdown;
+  font-size: 1.5rem;
+  margin-right: var(--spacing-12);
+  font-weight: normal;
+  color: #777777;
+
+
+  @include respond(phone) {
+    width: calc(100vw - var(--spacing-24));
+    margin: 0 auto;
+    // float: none;
+  }
+
+  & li {
+    padding: var(--spacing-06);
+  }
+
+  &__section {
+    padding: var(--spacing-06) var(--spacing-18);
+    &:not(:last-child) {
+      border-bottom: 1px solid #e4e4e4;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-pointer {
+      cursor: pointer;
+    }
+  }
+
+  &__icon-visible-box {
+    @include centering-children;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #979797;
+    &:hover{
+      background:  var(--color-grey-2-3)
+    }
+  }
+
+  &__icon-visible {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-grey-dark-1);
+    margin-left:  var(--spacing-12);
+  }
+
+  &__icon-plus_in_circle {
+    height: 2rem;
+    width: 2rem;
+    fill: #7f7f7f;
+    cursor: pointer;
+  }
+
+  &__bigger {
+    color: var(--color-black);
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &__ballance {
+    color: var(--color-black);
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+
+  &__title {
+    color: var(--color-black);
+    font-weight: 500;
+    padding: var(--spacing-06);
+  }
+}

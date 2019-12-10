@@ -1,0 +1,34 @@
+.SocialNetworkLoginBtn {
+  width: 9.7rem;
+  height: 5rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-grey-6);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+
+  &__via {
+    color: var(--color-grey-dark-3);
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  &__icon--facebook-color {
+    width: 3.3rem;
+    height: 3.3rem;
+    margin: 0 1rem;
+  }
+
+  &__icon--google-color {
+    width: 3.4rem;
+    height: 3.4rem;
+    margin: 0 1rem;
+  }
+
+  &__icon--telegram-color {
+    width: 3.6rem;
+    height: 3.6rem;
+    margin: 0 1rem;
+  }
+}

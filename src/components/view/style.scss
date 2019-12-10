@@ -1,0 +1,112 @@
+@import '../../scss/mixins';
+
+.Route {
+  width: 76rem;
+  margin: 0 auto;
+  margin-top: 6.4rem;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:nth-child(2) {
+      padding: var(--spacing-18);
+      padding-top: var(--spacing-24);
+      background: var(--color-white);
+      border-radius: 8px;
+    }
+    &:not(:last-child) {
+      margin-bottom: var(--spacing-12);
+    }
+  }
+
+  &__SocialNetwork {
+    margin-bottom: var(--spacing-30);
+  }
+
+  &__fixed-width {
+    position: relative;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    // flex-basis: 100%;
+  }
+
+  &__hashtags {
+    margin-bottom: var(--spacing-12);
+  }
+  &__marg-top {
+    margin-top: var(--spacing-12);
+  }
+
+  &__createWebPage-container {
+    margin-top: var(--spacing-24);
+  }
+
+  &__UserHeadingView-box {
+    height: 21rem;
+    min-width: 38.2rem;
+  }
+
+  &__AboutMe-box {
+    height: 21rem;
+  }
+}
+
+
+.Route_3 {
+  width: 76rem;
+  margin: 0 auto;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-18);
+    &:not(:first-child) {
+      padding: var(--spacing-24) var(--spacing-12) var(--spacing-18);
+      background: var(--color-white);
+      border-radius: 8px;
+    }
+  }
+
+  &__SocialNetwork {
+    margin-bottom: var(--spacing-30);
+  }
+
+  &__fixed-width {
+    width: 350px;
+  }
+
+  &__hashtags {
+    margin: var(--spacing-24) 0  var(--spacing-18);
+  }
+}
+
+
+.Route_2 {
+  width: 76rem;
+  margin: 0 auto;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-18);
+    &:not(:first-child) {
+      padding: var(--spacing-24) var(--spacing-12) var(--spacing-18);
+      background: var(--color-white);
+      border-radius: 8px;
+    }
+  }
+
+  &__fixed-width {
+    width: 350px;
+  }
+
+  &__hashtags {
+    margin: 0 0  var(--spacing-12);
+  }
+}
+
+
+
+

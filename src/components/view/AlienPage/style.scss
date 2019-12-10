@@ -1,0 +1,71 @@
+@import '../../../scss/mixins';
+
+.Alien {
+  height: 100vh;
+  padding-top: var(--header-height);
+  display: grid;
+  grid-template-columns: repeat(3, 38.2rem);
+  grid-template-rows: 20rem 20rem 24.3rem;
+  grid-gap: var(--spacing-24);
+  align-content: center;
+  justify-content: center;
+  grid-template-areas:
+    'UserHeading AboutMe Ads'
+    'UserMainInfo Features AddedReviews'
+    'UserMainInfo UserDetails AddedReviews';
+
+  @include respond(phone) {
+    height: auto;
+    width: 100vw;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: var(--spacing-06);
+    grid-template-areas:
+      'UserHeading'
+      'UserDetails'
+      'CallToAction'
+      'Ads';
+
+    & > *:not(:first-child) {
+      border-radius: 8px;
+    }
+  }
+
+  &__UserHeading-box {
+    grid-area: UserHeading;
+  }
+
+  &__AboutMe-box {
+    grid-area: AboutMe;
+  }
+
+  &__Ads-box {
+    grid-area: Ads;
+  }
+
+  &__UserMainInfo-box {
+    grid-area: UserMainInfo;
+  }
+
+  &__Features-box {
+    grid-area: Features;
+  }
+
+  &__AddedReviews-box {
+    grid-area: AddedReviews;
+  }
+
+  &__UserDetails-box {
+    grid-area: UserDetails;
+  }
+
+  &__Ads-box {
+    @include respond(phone) {
+      grid-area: Ads;
+    }
+  }
+  &__CallToAction-box {
+    grid-area: CallToAction;
+    padding: 1rem;
+  }
+}

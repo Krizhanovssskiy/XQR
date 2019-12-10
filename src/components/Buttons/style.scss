@@ -1,0 +1,84 @@
+.Button{
+  &__none-background {
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  &__none-background-icon {
+    width: 20px;
+    height: 20px;
+  }
+//////////////////////////////////////////////
+  &__plus {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px dashed grey;
+    border-radius: 50%;
+    cursor: pointer;
+    fill: var(--color-primary);
+    cursor: pointer;
+  }
+
+  &__plus-icon {
+    width: 15px;
+    height: 15px;
+  }
+  //////////////////////////////////////////////
+  &__social-network {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    fill: var(--color-white);
+    background: var(--color-primary);
+    cursor: pointer;
+  }
+
+  &__social-network-icon {
+    width: 16px;
+    height: 16px;
+  }
+///////////////////////////////
+  &__plusCircle {
+    cursor: pointer;
+    fill: var(--color-primary);
+  }
+  &__plusCircle-icon {
+    width: 45px;
+    height: 55px;
+  }
+  ///////////////////////////////////////////
+  &__photo-camera-box {
+    width: 46px;
+    height: 46px;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--color-white);
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+
+  &__photo-camera-icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+}

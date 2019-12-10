@@ -1,0 +1,67 @@
+@import '../../scss/mixins';
+
+.Header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: var(--header-height);
+  font-size: 1.4rem;
+  background-color: var(--color-header);
+
+  z-index: 999;
+  display: flex;
+
+  &__shadow-box {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-header);
+    box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.25);
+    @include respond(phone) {
+      padding: 0 var(--spacing-12);
+    }
+  }
+
+  &__avatar {
+    width: 33px;
+    height: 33px;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__box {
+    height: 100%;
+    display: flex;
+    flex: 0 0 50%;
+    align-items: center;
+
+    @include respond(phone) {
+      flex: auto;
+    }
+
+    &--left {
+      justify-content: flex-start;
+    }
+
+    &--right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 2rem;
+  }
+
+  &__logo {
+    height: var(--header-height);
+    width: 6.1rem;
+    fill: var(--color-logo);
+  }
+}

@@ -1,0 +1,98 @@
+@import '../../scss/mixins.scss';
+
+.section {
+  &__tabs-list {
+    width: 100%;
+    height: var(--spacing-18);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: var(--spacing-12);
+  }
+
+  &__tab-item {
+    border-bottom: 2px solid var(--color-grey-dark);
+    padding-bottom: 0.2rem;
+    color: var(--color-grey-dark);
+    cursor: pointer;
+    flex: 1;
+    line-height: 1;
+  }
+
+  &__tab-item--active {
+    border-bottom: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &__tab-title {
+    @include sectionTitile;
+  }
+}
+
+.CvPopup {
+  &__tabs-content {
+    margin-top: var(--spacing-24);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__tabs-list {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    // @include horizont-scrollbar;
+  }
+
+  &__tab-item {
+    font-family: var(--font-primary-semibold);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: var(--color-popup-text);
+    padding: var(--spacing-06);
+    cursor: pointer;
+  }
+
+  &__tab-item--active {
+    color: var(--color-white);
+    cursor: default;
+  }
+  &__tab-title {
+  }
+}
+
+.GlobalMenu {
+  &__tabs-list {
+    width: 100%;
+    height: var(--spacing-18);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: var(--spacing-12);
+  }
+
+  &__tab-item {
+    border-bottom: 2px solid var(--color-grey-dark);
+    padding-bottom: 0.2rem;
+    color: var(--color-grey-dark);
+    cursor: pointer;
+    flex: 1 1;
+    line-height: 1;
+  }
+
+  &__tab-item--active {
+    border-bottom: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &__tab-title {
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: capitalize;
+
+    @include respond(mobile-m) {
+      font-size: 1.2rem;
+    }
+  }
+
+}

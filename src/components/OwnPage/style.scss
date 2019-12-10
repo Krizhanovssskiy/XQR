@@ -1,0 +1,62 @@
+@import '../../scss/mixins';
+
+.OwnPage {
+  height: 100vh;
+  padding-top: var(--header-height);
+  display: grid;
+  grid-template-columns: repeat(3, 37rem);
+  grid-template-rows: 17.9rem 20rem 25.6rem;
+  grid-gap: var(--spacing-24);
+  align-content: center;
+  justify-content: center;
+  grid-template-areas:
+    'UserHeading MainAboutMe Friends'
+    'UserMainInfo Features Friends'
+    'UserMainInfo UserDetails Friends';
+
+  @include respond(phone) {
+    height: auto;
+    width: 100vw;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: var(--spacing-06);
+    grid-template-areas:
+      'UserHeading'
+      'UserDetails'
+      'CallToAction'
+      'Friends';
+
+    & > *:not(:first-child) {
+      border-radius: 8px;
+    }
+  }
+
+  &__UserHeading-box {
+    grid-area: UserHeading;
+  }
+
+  &__UserMainInfo-box {
+    grid-area: UserMainInfo;
+  }
+
+  &__MainAboutMe-box {
+    grid-area: MainAboutMe;
+  }
+
+  &__Features-box {
+    grid-area: Features;
+  }
+
+  &__UserDetails-box {
+    grid-area: UserDetails;
+  }
+
+  &__Friends-box {
+    grid-area: Friends;
+  }
+
+  &__CallToAction-box {
+    grid-area: CallToAction;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../../scss/mixins';
+.LangSkills {
+  cursor: pointer;
+
+  &__item {
+    margin-bottom: var(--spacing-18);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icons-box {
+    margin-right: var(--spacing-36);
+    display: flex;
+  }
+
+  &__icon-box {
+    padding: 0 2px;
+    @include centering-children;
+  }
+
+  &__icon {
+    height: 1.6rem;
+    width: 1.6rem;
+    fill: var(--color-primary);
+  }
+
+  &__text-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text-box > *:not(:last-child) {
+    margin-right: var(--spacing-06);
+  }
+}

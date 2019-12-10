@@ -1,0 +1,117 @@
+@import '../../scss/mixins';
+
+.Contact {
+  height: 7.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 2.1rem 1.2rem 7px;
+  border-bottom: 1px solid var(--color-grey-6);
+
+  &:not(:last-child) {
+    // margin-bottom: 10px;
+  }
+
+  &--active {
+    background-color: var(--color-grey-3);
+  }
+
+  &__contact-box {
+    // margin: 2rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__images-block {
+    position: relative;
+    width: 5.7rem;
+    height: 5.7rem;
+  }
+
+  &__image-box {
+    width: 5.5rem;
+    position: absolute;
+    @include centering-children;
+  }
+
+  &__image {
+    display: inline-block;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--color-contact-image-border);
+  }
+
+  // QR CODE
+  /////////////////////////////////////
+
+  &__qr-box {
+    position: absolute;
+    right: -4px;
+    bottom: -1px;
+    width: 25px;
+    height: 25px;
+    padding: 1px;
+    border-radius: 100px;
+    @include centering-children;
+
+    background: linear-gradient(
+      to bottom,
+      var(--color-purple-1),
+      var(--color-purple-2)
+    );
+  }
+
+  &__qr-innerbox {
+    background-color: var(--color-white);
+    height: 100%;
+    border-radius: 100px;
+    @include centering-children;
+  }
+
+  &__qr-code {
+    width: 64%;
+    // border-radius: 50%;
+  }
+
+  ///////////////////////////////
+
+  &__text-box {
+    margin-left: 1rem;
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.9rem;
+  }
+
+  &__spec {
+    color: var(--color-primary-dark-2);
+    font-size: 1.2rem;
+  }
+
+  &__contact {
+    line-height: 1.2rem;
+    font-size: 1rem;
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon-amount-letters {
+    margin-right: 3px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  &__icon {
+    fill: var(--color-grey-4);
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}

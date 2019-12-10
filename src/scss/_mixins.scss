@@ -1,0 +1,87 @@
+@mixin sectionTitile {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin centering-children {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centering-abs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin horizont-scrollbar {
+  &::-webkit-scrollbar {
+    height: 4px;
+    background: var(--color-grey-7);
+    border-radius: 2.5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2.5px;
+    background-color: var(--color-grey-4);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@mixin vertical-scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+    background: var(--color-grey-7);
+    border-radius: 2.5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2.5px;
+    background-color: var(--color-grey-4);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@mixin dropdown {
+  font-family: var(--font-secondary);
+  border-radius: 0 0 4px 4px;
+  background-color: var(--color-header);
+  width: 35.7rem;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == mobile-l {
+    @media only screen and (max-width: 26.5625em) {
+      @content;
+    } //425px
+  }
+  @if $breakpoint == mobile-m {
+    @media only screen and (max-width: 23.4375em) {
+      @content;
+    } //375px
+  }
+}
