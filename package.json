@@ -9,7 +9,7 @@
     "body-scroll-lock": "^2.6.4",
     "downloadjs": "^1.4.7",
     "i18next": "^17.0.13",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
